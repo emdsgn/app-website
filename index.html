@@ -5,6 +5,7 @@
   <title>Spoil Alert</title>
   <link href="css/general.css" rel="stylesheet">
   <link href="css/grid.css" rel="stylesheet">
+  <link href="//vjs.zencdn.net/4.2/video-js.css" rel="stylesheet">
 </head>
 <body>
 
@@ -20,8 +21,15 @@
 
 	<div class="grid">
 		<div class="unit unit-s-1 unit-m-1 unit-l-2-3">
-		<img src="http://placehold.it/575x322" class="flex-img img-1" alt="DL BTN">
-		<img src="http://placehold.it/500x600" class="flex-img img-2" alt="DL BTN">
+		<dialog>
+  	<video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered"
+  controls preload="auto" width="640" height="264"
+  data-setup='{"example_option":true}'>
+   <source src="https://vimeo.com/81426017" type='video/mp4'>
+	</video>
+  	<button id="close">Close</button>
+		</dialog>
+		<button id="show"><img src="img/app-video.png" class="flex-img"></button>
 		</div>
 
 		<div class="unit unit-s-1 unit-m-1 unit-l-1-3 app-desc">
@@ -57,5 +65,19 @@
 
  <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
   <script src="js/main.js"></script>
+	<script src="//vjs.zencdn.net/4.2/video.js"></script>
+  <script>
+if (!Modernizr.inlinesvg) {
+  ;(function () {
+    var imgs = document.getElementsByTagName('img')
+      , totalImgs = imgs.length
+      , i = 0
+
+      for (i = 0; i < totalImgs; i++) {
+        imgs[i].src = imgs[i].src.replace(/svg$/, 'png')
+      }
+  }())
+}
+</script>
 </body>
 </html>
