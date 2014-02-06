@@ -1,49 +1,66 @@
-.ships {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-	text-align: center;
+.color-logo {
+	-webkit-animation: change-color 2s linear 1;
+	-webkit-transform-origin: background-color 2s;
 }
 
-.ships li {
-	display: inline-block;
-	margin: 0 2rem;
-}
-
-.ships img {
-	width: 140px;
-	opacity: 0;
-	-webkit-transform: translateY(140px);
-}
-
-@-webkit-keyframes ship-fly {
+@-webkit-keyframes change-color {
 	0% {
-		opacity: 0;
-		-webkit-transform: translateY(140px);
 	}
 
-	40% {
-		opacity: 1;
+	100% {
+		background-color: #50972B;
+	}
+}
+
+.img-1,
+.img-2,
+.img-3 {
+	width: 30%;
+	opacity: 1;
+	margin: 0 auto;
+	padding: 0;
+	-webkit-animation: opa 6s linear 1;
+}
+
+.img-4 {
+	width: 20%;
+	margin: 0 auto;
+	padding: 0;
+	-webkit-animation: flash 6s linear infinite;
+}
+
+@-webkit-keyframes opa {
+	0% {
+		opacity: 0;
 	}
 
 	100% {
 		opacity: 1;
-		-webkit-transform: translateY(0);
 	}
 }
 
-.js-ships-animate {
-	-webkit-animation: ship-fly 1s ease-out 1 forwards;
+@-webkit keframes flash {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }
 
-.js-ship-delay-1 {
+.js-img-1-animate {
+	-webkit-animation: opa 1s ease-out 1 forwards;
+}
+
+.js-img-2-delay-1 {
 	-webkit-animation-delay: 100ms;
 }
 
-.js-ship-delay-2 {
+.js-img-3-delay-2 {
 	-webkit-animation-delay: 200ms;
 }
 
-.js-ship-delay-3 {
+.js-img-4-delay-3 {
 	-webkit-animation-delay: 250ms;
 }
