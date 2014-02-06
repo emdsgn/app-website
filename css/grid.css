@@ -26,7 +26,7 @@
   display: none;
 }
 
-@media only screen and (max-width: 38em) {
+@media only screen and (max-width: 15em) {
   .unit-s-hidden {
     display: none;
     visibility: hidden;
@@ -49,8 +49,15 @@
   .unit-s-3-4 {
     width: 75%;
   }
-  .unit-i-1 {
-    width: 100%;
+}
+
+@media only screen and (max-width: 38em) {
+  .unit-s-1-2 {
+    width: 50%;
+  }
+
+  .unit-s-1-3 {
+    width: 33.33333%;
   }
 }
 @media only screen and (min-width: 38em) and (max-width: 60em) {

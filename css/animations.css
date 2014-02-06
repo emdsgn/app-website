@@ -1,0 +1,49 @@
+.ships {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+}
+
+.ships li {
+	display: inline-block;
+	margin: 0 2rem;
+}
+
+.ships img {
+	width: 140px;
+	opacity: 0;
+	-webkit-transform: translateY(140px);
+}
+
+@-webkit-keyframes ship-fly {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(140px);
+	}
+
+	40% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+	}
+}
+
+.js-ships-animate {
+	-webkit-animation: ship-fly 1s ease-out 1 forwards;
+}
+
+.js-ship-delay-1 {
+	-webkit-animation-delay: 100ms;
+}
+
+.js-ship-delay-2 {
+	-webkit-animation-delay: 200ms;
+}
+
+.js-ship-delay-3 {
+	-webkit-animation-delay: 250ms;
+}
