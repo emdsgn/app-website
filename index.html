@@ -3,81 +3,158 @@
 <head>
   <meta charset="utf-8">
   <title>Spoil Alert</title>
+  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/general.css" rel="stylesheet">
+  <link href="css/carousel.css" rel="stylesheet">
+  <link href="css/video.css" rel="stylesheet">
+  <link href="css/dialog-polyfill.css" rel="stylesheet">
+  <link href="css/animations.css" rel="stylesheet">
   <link href="css/grid.css" rel="stylesheet">
-  <link href="//vjs.zencdn.net/4.2/video-js.css" rel="stylesheet">
+  <meta name="handheldfriendly" content="true">
+  <meta name="mobileoptimized" content="240">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
+  <header>
+    <nav class="unit left-m">
+      <a href="index.html" class="logo">
+        <img src="img/logo.svg" class="flex-img" alt="logo">
+      </a>
+    </nav>
+    <nav class="unit">
+      <div class="unit-spacer">
+        <a href="index.html" class="logo">
+          <h1>Spoil Alert App</h1>
+        </a>
+      </div>
+    </nav>
 
-	<div class="grid">
-		<div class="unit unit-s-1 unit-m-1-4 unit-l2-1-4 logo">
-			<img src="img/logo.svg" class="logo-img" alt="">
-		</div>
+    <nav class="unit unit-s-1-3 right-m">
+      <div class="unit-spacer space-r">
+      <ul>
+        <a href="#download">Download</a>
+        <a href="#screenshots">Highlights</a>
+        <a href="#features">Instructions</a>
+      </ul>
+      </div>
+    </nav>
+  </header>
 
-		<div class="unit unit-s-1 unit-m-3-4 unit-l-4-4 text">
-			<h1>Spoil Alert</h1>
-		</div>
-	</div>
+    <section class="grid">
+      <div class="desc">
+        <div class="unit unit-s-1 unit-s-1-2 unit-m-1-2 unit-l-1-3">
+          <div class="unit-spacer">
+            <button id="btn-open"><img src="img/img-1.jpg" alt=""></button>
 
-	<div class="grid">
-		<div class="unit unit-s-1 unit-m-1 unit-l-2-3">
-		<dialog>
-  	<video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered"
-  controls preload="auto" width="640" height="264"
-  data-setup='{"example_option":true}'>
-   <source src="https://vimeo.com/81426017" type='video/mp4'>
-	</video>
-  	<button id="close">Close</button>
-		</dialog>
-		<button id="show"><img src="img/app-video.png" class="flex-img"></button>
-		</div>
+            <dialog id="video">
+              <button id="btn-close">×</button>
+              <div id="video-placeholder"></div>
+            </dialog>
+          </div>
+        </div>
 
-		<div class="unit unit-s-1 unit-m-1 unit-l-1-3 app-desc">
-		<h2>Spoil Alert is an app to help you keep track of your food when you are too busy studying, working and having fun.</h2>
+        <div class="unit unit-s-1 unit-s-1-2 unit-m-1-2 unit-l-2-3">
+          <div class="unit-spacer">
+            <h2>Spoil Alert App</h2>
+            <p class="body">Are you too busy to keep track of your food? Or do you come home and see that your food is all of a sudden expired? Well, it is your lucky day because <em>Spoil Alert app</em> will help you keep track of your food for you! You do not have to worry about reminding yourself anymore or coming home and being surprised with expired goods!</p>
+            <button class="dl" id="download"><a href="index.html" alt=""><img src="img/download.svg"></a></button>
+          </div>
+        </div>
 
-			<div class="dl-btn">
-			<img src="img/download.svg" class="flex-img dl-img" alt="DL BTN">
-			</div>
-		</div>
-	</div>
+        <section class="unit-s-1-2 ships-section">
+          <ul class="ships">
+          <li><img src="img/banana-1.svg" alt=""></li>
+          <li><img src="img/banana-2.svg" alt=""></li>
+          <li><img src="img/banana-3.svg" alt=""></li>
+          <li><img src="img/noti.svg" alt=""></li>
+          </ul>
+        </section>
+      </div>
+    </section>
 
-	<div class="grid">
-		<div class="video">
-			<div class="carousel">
-			<div class="carousel-items">
-				<img src="img/img-1.jpg" class="flex-img" data-state="current" alt="">
-				<img src="img/img-2.jpg" class="flex-img" alt="">
-				<img src="img/img-3.jpg" class="flex-img" alt="">
-				<img src="img/img-4.jpg" class="flex-img"alt="">
-			</div>
+    <section class="screenshots" id="screenshots">
+      <div class="unit-spacer">
+        <h2>Highlights</h2>
+      </div>
+      <div class="unit-spacer">
+        <div class="carousel">
+          <div class="carousel-items">
+            <img data-state="current" src="img/img-1.jpg" alt="">
+            <img src="img/img-2.jpg" alt="">
+            <img src="img/img-3.jpg" alt="">
+            <img src="img/img-4.jpg" alt="">
+          </div>
+          <div class="carousel-buttons">
+            <button class="prev">〈</button>
+            <button class="next">〉</button>
+          <div>
+        </div>
+      </div>
+    </section>
 
-			<div class="carousel-btns">
-				<button class="previous">Previous</button>
-				<button class="next">Next</button>
-			</div>
-			</div>
-		</div>
-	</div>
+    <section class="grid features" id="features">
+      <div class="unit unit-s-1 unit-m-1 unit-l-1">
+        <div class="unit-spacer">
+          <h2>Instructions</h2>
+        </div>
+      </div>
+      <div class="unit unit-s-1 unit-m-1-2 unit-l-1-3">
+        <div class="unit-spacer">
+          <img src="http://placehold.it/200x200" alt="video">
+        </div>
+      </div>
+      <div class="unit unit-s-1 unit-m-1-2 unit-l-1-3">
+        <div class="unit-spacer">
+          <img src="http://placehold.it/200x200" alt="video">
+        </div>
+      </div>
+      <div class="unit unit-s-1 unit-m-1-2 unit-l-1-3">
+        <div class="unit-spacer">
+          <img src="http://placehold.it/200x200" alt="video">
+        </div>
+      </div>
+      <div class="unit unit-s-1 unit-m-1-2 unit-l-1-3">
+        <div class="unit-spacer">
+          <img src="http://placehold.it/200x200" alt="video">
+        </div>
+      </div>
+      <div class="unit unit-s-1 unit-m-1-2 unit-l-1-3">
+        <div class="unit-spacer">
+          <img src="http://placehold.it/200x200" alt="video">
+        </div>
+      </div>
+      <div class="unit unit-s-1 unit-m-1-2 unit-l-1-3">
+        <div class="unit-spacer">
+          <img src="http://placehold.it/200x200" alt="video">
+        </div>
+      </div>
+    </section>
 
-	<footer>
-		<p>© Spoil Alert 2014. All rights reserved.</p>
-	</footer>
+  </div>
 
- <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+  <footer>
+    <div class="grid">
+      <nav class="unit unit-s-1-2 copyright">
+        <p>© Mansura Chowdhury 2014</nav>
+
+      <nav class="unit unit-s-1-3 foot-m">
+        <div class="unit-spacer space-r">
+          <ul>
+          <a href="#download">Download</a>
+          <a href="#screenshots">Highlights</a>
+          <a href="#features">Instructions</a>
+        </ul>
+        </div>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
   <script src="js/main.js"></script>
-	<script src="//vjs.zencdn.net/4.2/video.js"></script>
-  <script>
-if (!Modernizr.inlinesvg) {
-  ;(function () {
-    var imgs = document.getElementsByTagName('img')
-      , totalImgs = imgs.length
-      , i = 0
-
-      for (i = 0; i < totalImgs; i++) {
-        imgs[i].src = imgs[i].src.replace(/svg$/, 'png')
-      }
-  }())
-}
-</script>
+  <script src="js/slide.js"></script>
+  <script src="js/dialog-polyfill.js"></script>
+  <script src="js/video.js"></script>
+  <script src="js/waypoints.min.js"></script>
+  <script src-"js/animations.js"></script>
 </body>
 </html>
